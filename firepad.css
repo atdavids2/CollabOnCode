@@ -9,5 +9,12 @@
 .CodeMirror {
 	background-color: #f62;
 	width: 100% !important;
-	height: 100% !important;
+	height: 900px !important;
+}
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
 }

@@ -2,30 +2,41 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="firepad.css">
+	<base href='76.10.46.9'>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<title>CollabOnCode</title>
-	<!-- Firebase -->
-	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-
-	<!-- CodeMirror -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.css" />
-
-	<!-- Firepad -->
-	<link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.3.0/firepad.css" />
-	<script src="https://cdn.firebase.com/libs/firepad/1.3.0/firepad.min.js"></script>
 </head>
 
 <body>
 
-	<div id="firepad"></div>
-	<script>
-		var firepadRef = new Firebase('https://collaboncode.firebaseio.com/');
-		var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
-		var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
-		{ richTextShortcuts: true, richTextToolbar: true, defaultText: 'Hello, World!' });
-	</script>
+	<div class='container'>
+		<h2>CollabOnCode</h2>
+		<p>Select an available pad</p>
+		<table class='table table-striped'>
+			<thead>
+				<tr>
+					<th>Pad Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href='/firepad.html?pad=pad1'>Pad 1</a></td>
+				</tr>
+				<tr>
+					<td><a href='/firepad.html?pad=pad2'>Pad 2</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 </body>
 </html>
